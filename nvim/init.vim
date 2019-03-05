@@ -1,0 +1,32 @@
+call plug#begin('~/.vim/plugged')
+
+Plug 'fatih/vim-go' 
+Plug 'godoctor/godoctor.vim' 
+Plug 'ctrlpvim/ctrlp.vim' 
+"Plug 'vimwiki/vimwiki'
+
+"if !has('nvim')
+" Plug 'maralla/completor.vim' " or whichever you use
+"endif
+"if has('nvim')
+" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" Plug 'zchee/deoplete-go', {'build': {'unix': 'make'}}
+" Plug 'jodosha/vim-godebug' " Debugger integration via delve
+"endif
+
+" All of your Plugs must be added before the following line
+call plug#end()
+
+"""""""""""""""""""""""""""""""""""""""""""
+" After Any Change you need to call
+" :PlugInstall
+" :GoInstallBinaries
+"""""""""""""""""""""""""""""""""""""""""""
+
+let g:go_version_warning = 0
+
+let g:go_highlight_structs = 1 
+let g:go_highlight_methods = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1

@@ -3,6 +3,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'fatih/vim-go' 
 Plug 'godoctor/godoctor.vim' 
 Plug 'ctrlpvim/ctrlp.vim' 
+Plug 'christoomey/vim-tmux-navigator'
 "Plug 'vimwiki/vimwiki'
 
 "if !has('nvim')

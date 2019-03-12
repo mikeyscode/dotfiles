@@ -1,3 +1,7 @@
+set nocompatible
+    filetype plugin on
+syntax on
+
 call plug#begin('~/.vim/plugged')
 
 Plug 'fatih/vim-go' 

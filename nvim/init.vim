@@ -4,6 +4,7 @@ Plug 'fatih/vim-go'
 Plug 'godoctor/godoctor.vim' 
 Plug 'ctrlpvim/ctrlp.vim' 
 Plug 'christoomey/vim-tmux-navigator'
+Plug '~/workspace/dotfiles/nvim/plugins/vimwiki'
 "Plug 'vimwiki/vimwiki'
 
 "if !has('nvim')

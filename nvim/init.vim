@@ -61,7 +61,10 @@ if (empty($TMUX))
   endif
 endif
 
-colorscheme one
 set background=dark 
+colorscheme one
 let g:one_allow_italics = 1 " I love italic for comments
+
+set t_8b=^[[48;2;%lu;%lu;%lum
+set t_8f=^[[38;2;%lu;%lu;%lum
 

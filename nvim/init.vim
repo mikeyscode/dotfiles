@@ -47,6 +47,9 @@ augroup auto_go
 	autocmd BufWritePost *_test.go :GoTest
 augroup end
 
-set t_Co=256
+"set t_Co=256
+"if (has("termguicolors"))
+" set termguicolors
+"endif
 
 colorscheme iceberg

@@ -54,9 +54,7 @@ if exists('+termguicolors')
   set termguicolors
 endif
 
-colorscheme one-dark
-set background=dark 
-let g:one_allow_italics = 1 " I love italic for comments
+colorscheme iceberg
 
 set t_8b=^[[48;2;%lu;%lu;%lum
 set t_8f=^[[38;2;%lu;%lu;%lum

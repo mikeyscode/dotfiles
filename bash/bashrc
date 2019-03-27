@@ -25,3 +25,5 @@ export PS1="\[\e[1;31m\]\$(__git_ps1 '[%s]') ⦦ \[$(tput sgr0)\]"
 
 # Docker
 export DOCKER_HOST="unix:///var/run/docker.sock"
+
+export JACKHOST="ob1-001143"

@@ -55,3 +55,5 @@ augroup end
 
 colorscheme iceberg
 set nu
+
+set clipboard=unnamedplus

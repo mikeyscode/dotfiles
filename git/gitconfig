@@ -16,3 +16,7 @@
 
   [diff]
     tool = vimdiff
+[merge]
+	tool = vimdiff
+[mergetool]
+	path = nvim

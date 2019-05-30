@@ -2,3 +2,7 @@ alias mountscanned='sudo mount.cifs  "//aragorn/Teams/Information Security Depar
 alias mountjdoc='sudo mount.cifs "//pfs001b/Development Department/Jacob Cartledge" /home/jacobcartledge/jdocs -o user=jacobcartledge,uid=1287767733,gid=9999,file_mode=0777,dir_mode=0777,vers=2.0'
 
 alias dots='cd ~/workspace/dotfiles/'
+
+MUNISA='hls-f11834'
+JACK='ob1-001143'
+BRETT='ob1-000350'

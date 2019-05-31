@@ -1,5 +1,8 @@
 alias mountscanned='sudo mount.cifs  "//aragorn/Teams/Information Security Department Shared/Public/" /home/jacobcartledge/scanned_software -o user=jacobcartledge,uid=1287767733,gid=$9999,dir_mode=0777,vers=2.0'
+
 alias mountjdoc='sudo mount.cifs "//pfs001b/Development Department/Jacob Cartledge" /home/jacobcartledge/jdocs -o user=jacobcartledge,uid=1287767733,gid=9999,file_mode=0777,dir_mode=0777,vers=2.0'
+
+alias mountjdrive='sudo mount.cifs "//pfs001b/Development Department" /home/jacobcartledge/jdrive -o user=jacobcartledge,uid=1287767733,gid=9999,file_mode=0777,dir_mode=0777,vers=2.0'
 
 alias dots='cd ~/workspace/dotfiles/'
 

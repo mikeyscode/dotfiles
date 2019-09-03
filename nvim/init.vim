@@ -54,7 +54,7 @@ augroup end
 " set termguicolors
 "endif
 
-""colorscheme iceberg
+colorscheme default2
 ""set nu
 
 set clipboard=unnamedplus

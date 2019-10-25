@@ -1,3 +1,8 @@
+
+if [ -f ~/workspace/dotfiles/bash/betslip_selection_parser ]; then
+	. ~/workspace/dotfiles/bash/betslip_selection_parser
+fi
+
 alias mountscanned='sudo mount.cifs  "//aragorn/Teams/Information Security Department Shared/Public/" /home/jacobcartledge/scanned_software -o user=jacobcartledge,uid=1287767733,gid=$9999,dir_mode=0777,vers=2.0'
 
 alias mountjdoc='sudo mount.cifs "//pfs001b/Development Department/Jacob Cartledge" /home/jacobcartledge/jdocs -o user=jacobcartledge,uid=1287767733,gid=9999,file_mode=0777,dir_mode=0777,vers=2.0'
@@ -21,67 +26,4 @@ fj() {
 	fi
 }
 
- ns() {
-	delimiter="||"
-	s=$1$delimiter
 
-	count=1
-
-	while [[ $s ]]; do
-	    selection=${s%%"$delimiter"*}
-
-	    if [[ $selection == "" ]]
-	    then 
-		break
-            fi
-
-	    echo "Selection $count [$selection]"
-
-		IFS='#' read -ra y <<< "$selection"
-		
-		echo -e "\t## [Construct Section]"
-		for i in "${y[@]}"
-		do
-			var1=$(echo $i | cut -f1 -d=)
-			var2=$(echo $i | cut -f2 -d=)
-		
-			if [[ ${var1:0:1} == "|" ]]
-			then 
-				echo -e "\t## [User Section]"
-				var1=${var1:1}
-			fi
-		
-			echo -e "\t\033[0;31m  $var1\033[0m = \033[0;34m$var2\033[0m"
-		done
-
-	    s=${s#*"$delimiter"};
-	   ((count++))
-	done;
-
-
- }
-
-# ns() {
-# 	IFS='#' read -ra y <<< "$1"
-# 
-# 	echo "## Construct Section"
-# 	for i in "${y[@]}"
-# 	do
-# 		var1=$(echo $i | cut -f1 -d=)
-# 		var2=$(echo $i | cut -f2 -d=)
-# 
-# 		if [[ ${var1:0:2} == "||" ]] 
-# 		then
-# 			continue
-# 		fi
-# 			
-# 		if [[ ${var1:0:1} == "|" ]]
-# 		then 
-# 			echo "## [User Section]"
-# 			var1=${var1:1}
-# 		fi
-# 
-# 		echo -e "\033[0;31m  $var1\033[0m = \033[0;34m$var2\033[0m"
-# 	done
-# 
-# }

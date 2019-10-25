@@ -1,0 +1,67 @@
+#!/bin/bash
+nsv2() {
+ delimiter="||"
+ s=$1$delimiter
+
+ count=1
+
+ while [[ $s ]]; do
+    selection=${s%%"$delimiter"*}
+
+    if [[ $selection == "" ]]
+    then 
+	break
+    fi
+
+    echo "Selection $count [$selection]"
+
+	IFS='#' read -ra y <<< "$selection"
+	
+	echo -e "\t\033[1;30m## [Construct Section]\033[0;34m"
+	for i in "${y[@]}"
+	do
+		var1=$(echo $i | cut -f1 -d=)
+		var2=$(echo $i | cut -f2 -d=)
+	
+		if [[ ${var1:0:1} == "|" ]]
+		then 
+			echo -e "\t\033[1;30m## [User Section]\033[0;34m"
+			var1=${var1:1}
+		fi
+
+		__lookup_full_selection_name $var1 full_name
+
+		if [[ $full_name == "" ]]
+		then
+			printf "\t\033[0;31m %-3s\033[0m = \033[0;34m$var2\033[0m\n" $var1
+		else
+			 printf "\t\033[0;31m %-3s\033[0;36m($full_name)\033[0m = \033[0;34m$var2\033[0m\n" $var1
+		fi
+	done
+
+    	s=${s#*"$delimiter"};
+   	((count++))
+	done;
+}
+
+__lookup_full_selection_name() {
+	local _lookupkey=$1
+	local _returnvar=$2
+	
+	_fullname=${__full_selection_names[$_lookupkey]}	
+
+	if [[ "$_returnvar" ]]; then
+		eval $_returnvar="'$_fullname'"
+	else
+		echo "$_fullname"
+	fi
+}
+
+declare -A __full_selection_names=(
+	["c"]="Classification ID"
+	["pt"]="Participant Type"
+	["o"]="Odds"
+	["f"]="FixtureID"
+	["fp"]="Fixture Participant"
+	["TP"]="Topic ID"
+)

@@ -1,54 +1,54 @@
 #!/bin/bash
-nsv2() {
- delimiter="||"
- s=$1$delimiter
+ns() {
+ _delim="||"
+ s=$1$_delim
 
- count=1
+ _selectioncount=1
 
  while [[ $s ]]; do
-    selection=${s%%"$delimiter"*}
+    _selection=${s%%"$_delim"*}
 
-    if [[ $selection == "" ]]
+    if [[ $_selection == "" ]]
     then 
 	break
     fi
 
-    echo "Selection $count [$selection]"
+    echo "Selection $_selectioncount [$_selection]"
 
-	IFS='#' read -ra y <<< "$selection"
+	IFS='#' read -ra _y <<< "$_selection"
 	
 	echo -e "\t\033[1;30m## [Construct Section]\033[0;34m"
-	for i in "${y[@]}"
+	for _selectionstring in "${_y[@]}"
 	do
-		var1=$(echo $i | cut -f1 -d=)
-		var2=$(echo $i | cut -f2 -d=)
+		_key=$(echo $_selectionstring | cut -f1 -d=)
+		_value=$(echo $_selectionstring | cut -f2 -d=)
 	
-		if [[ ${var1:0:1} == "|" ]]
+		if [[ ${_key:0:1} == "|" ]]
 		then 
 			echo -e "\t\033[1;30m## [User Section]\033[0;34m"
-			var1=${var1:1}
+			_key=${_key:1}
 		fi
 
-		__lookup_full_selection_name $var1 full_name
+		_lookup_full_selection_name $_key _fullname
 
-		if [[ $full_name == "" ]]
+		if [[ $_fullname == "" ]]
 		then
-			printf "\t\033[0;31m %-3s\033[0m = \033[0;34m$var2\033[0m\n" $var1
+			printf "\t\033[0;31m %-3s\033[0m = \033[0;34m$_value\033[0m\n" $_key
 		else
-			 printf "\t\033[0;31m %-3s\033[0;36m($full_name)\033[0m = \033[0;34m$var2\033[0m\n" $var1
+			 printf "\t\033[0;31m %-3s\033[0;36m($_fullname)\033[0m = \033[0;34m$_value\033[0m\n" $_key
 		fi
 	done
 
-    	s=${s#*"$delimiter"};
-   	((count++))
+    	s=${s#*"$_delim"};
+   	((_selectioncount++))
 	done;
 }
 
-__lookup_full_selection_name() {
+_lookup_full_selection_name() {
 	local _lookupkey=$1
 	local _returnvar=$2
 	
-	_fullname=${__full_selection_names[$_lookupkey]}	
+	_fullname=${_full_selection_names[$_lookupkey]}	
 
 	if [[ "$_returnvar" ]]; then
 		eval $_returnvar="'$_fullname'"
@@ -57,7 +57,7 @@ __lookup_full_selection_name() {
 	fi
 }
 
-declare -A __full_selection_names=(
+declare -A _full_selection_names=(
 	["c"]="Classification ID"
 	["pt"]="Participant Type"
 	["o"]="Odds"

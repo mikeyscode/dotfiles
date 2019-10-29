@@ -58,10 +58,26 @@ _lookup_full_selection_name() {
 }
 
 declare -A _full_selection_names=(
-	["c"]="Classification ID"
 	["pt"]="Participant Type"
+	["f"]="Fixture ID"
+	["fp"]="Fixture Participant ID"
+	["pid"]="Player Fixture Participant ID"
+	["mid"]="Match Fixture Participant ID"
 	["o"]="Odds"
-	["f"]="FixtureID"
-	["fp"]="Fixture Participant"
-	["TP"]="Topic ID"
+	["ln"]="Line / Handicap"
+	["sa"]="Selection Added"
+	["c"]="Classification ID"
+	["oto"]="Odds Type Override"
+	["TP"]="Topic Id"
+	["ew"]="Each Way"
+	["av"]="Auto Void"
+	["ust"]="Unit Stake"
+	["st"]="Total Stake"
+	["fb"]="Free Bet Stake"
+	["tr"]="To Return"
+	["bk"]="Banker"
+	["ft"]="Free Bet Token Id (Redemption)"
+	["fbv"]="Free Bet Token value"
 )
+
+

@@ -54,10 +54,10 @@ augroup end
 " set termguicolors
 "endif
 
-""colorscheme default2
+colorscheme default2
 
-set background=dark
-colorscheme ir_black
+"set background=dark
+"colorscheme ir_black
 
 ""set nu
 

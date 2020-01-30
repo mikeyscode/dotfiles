@@ -20,3 +20,5 @@
 	tool = vimdiff
 [mergetool]
 	path = nvim
+[url "git@git-mw.uk365office.co.uk:"]
+	insteadOf = https://git-mw.uk365office.co.uk/

@@ -4,10 +4,10 @@ syntax on
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'fatih/vim-go' 
-Plug 'godoctor/godoctor.vim' 
-Plug 'ctrlpvim/ctrlp.vim' 
-Plug 'christoomey/vim-tmux-navigator'
+Plug '~/workspace/dotfiles/nvim/plugins/vim-go/'
+Plug '~/workspace/dotfiles/nvim/plugins/godoctor.vim/'
+Plug '~/workspace/dotfiles/nvim/plugins/ctrlp.vim/'
+Plug '~/workspace/dotfiles/nvim/plugins/vim-tmux-navigator/'
 Plug '~/workspace/dotfiles/nvim/plugins/vimwiki/'
 Plug '~/workspace/dotfiles/nvim/plugins/vim-one/'
 Plug '~/workspace/dotfiles/nvim/plugins/vim-delve-master'

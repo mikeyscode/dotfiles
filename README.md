@@ -8,7 +8,7 @@ ln -s /home/jacobcartledge/workspace/dotfiles/nvim/init.vim /home/jacobcartledge
 ## Git
 ln -s /home/jacobcartledge/workspace/dotfiles/git/gitconfig ~/.gitconfig
 
-ln -s /home/jacobcartledge/workspace/dotfiles/tmux/tmux.cong ~/.tmuxconf
+ln -s /home/jacobcartledge/workspace/dotfiles/tmux/tmux.conf ~/.tmuxconf
 
 
 

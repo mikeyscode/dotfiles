@@ -27,7 +27,7 @@ prompt_command () {
 
 export PS1="$ "
 #export PS1="\$(prompt_command) \[\e[1;31m\]\$(__git_ps1 '[%s]') ⦦ \[$(tput sgr0)\]"
-export PS1="\e[3m\$(prompt_command)\e[0m \[\e[1;31m\]\$(__git_ps1 '[%s]') ⦦ \[$(tput sgr0)\]"
+export PS1="\e[3m\$(prompt_command)\e[0m \[\e[1;31m\]\$(__git_ps1 '[%s]') $ \[$(tput sgr0)\]"
 
 
 # Docker

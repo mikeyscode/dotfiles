@@ -5,7 +5,6 @@ syntax on
 call plug#begin('~/.vim/plugged')
 
 Plug '~/workspace/dotfiles/nvim/plugins/vim-go/'
-Plug '~/workspace/dotfiles/nvim/plugins/godoctor.vim/'
 Plug '~/workspace/dotfiles/nvim/plugins/ctrlp.vim/'
 Plug '~/workspace/dotfiles/nvim/plugins/vim-tmux-navigator/'
 Plug '~/workspace/dotfiles/nvim/plugins/vimwiki/'
@@ -67,6 +66,9 @@ colorscheme iceberg
 set clipboard=unnamedplus
 set wildmenu                 " visual autocomplete for command menu
 set showmatch                " highlight matching brace
+
+set nonu
+set relativenumber
 
 set incsearch       " search as characters are entered
 set hlsearch        " highlight matche

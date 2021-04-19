@@ -1,0 +1,32 @@
+# Commands
+alias vim="nvim"
+alias vconf="nvim $HOME/workspace/dotfiles/nvim/init.vim"
+alias wrk="$HOME/workspace/tools/wrk/wrk"
+alias tmux="tmux -2"
+
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+
+# Project Alias
+alias dotfiles="cd $HOME/workspace/dotfiles/"
+alias projects="cd $HOME/workspace/projects"
+alias core="cd $HOME/workspace/projects/core"
+alias uads="cd $HOME/bet365/mod/b365/user_auth"
+
+# Exports
+MUNISA='hls-f11834'
+LINUX="mn3-000398"
+
+jdrive() {
+   sudo mount -t cifs -o user=mikeyleah,uid=mikeyleah "//pfs001b/Development Department/" /mnt/j
+}
+
+bjss() {
+    sudo mount -t cifs -o user=mikeyleah,uid=mikeyleah "//dev-fs/" /mnt/bjss
+}
+
+golp() {
+   /home/mikeyleah/bet365/path/src/golp/golp $1
+}

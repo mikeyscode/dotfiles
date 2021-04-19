@@ -1,22 +1,15 @@
 # Dotfiles
-## Bash
-To use: ln -s /home/jacobcartledge/workspace/dotfiles/bash/bashrc .bashrc
 
-## Neovim
-ln -s /home/jacobcartledge/workspace/dotfiles/nvim/init.vim /home/jacobcartledge/.config/nvim/init.vim
+## Installation
+In order to install the dotfiles you will need to symlink the files to their relevant locations. Below is a list of the symlinks required for installation.
 
-## Git
-ln -s /home/jacobcartledge/workspace/dotfiles/git/gitconfig ~/.gitconfig
+#### Bash
+```
+ln -s $HOME/workspace/dotfiles/bash/bashrc ~/.bashrc
+```
 
-ln -s /home/jacobcartledge/workspace/dotfiles/tmux/tmux.conf ~/.tmuxconf
+#### Tmux
+TBD
 
-
-
-
-
-## Crontab
-5 22 * * * /home/jacobcartledge/workspace/dotfiles/backitup.sh
-5 22 * * * /home/jacobcartledge/workspace/wiki/backitup.sh
-5 22 * * * /home/jacobcartledge/workspace/scipts/backitup.sh
-
-
+#### Neovim
+TBD

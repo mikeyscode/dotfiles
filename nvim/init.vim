@@ -42,6 +42,7 @@ set wildmenu                 " visual autocomplete for command menu
 set showmatch                " highlight matching brace
 
 set nonu
+set number
 set incsearch       " search as characters are entered
 set hlsearch        " highlight matche
 set ignorecase      " ignore case when searching

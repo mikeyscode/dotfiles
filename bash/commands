@@ -15,10 +15,16 @@ alias projects="cd $HOME/workspace/projects"
 alias core="cd $HOME/workspace/projects/core"
 alias uads="cd $HOME/bet365/mod/b365/user_auth"
 
+# Tmux Alias
+alias otbb="tmux attach-session -t bb"
+alias ctbb="tmux detach"
+alias ktbb="tmux kill-session -t bb"
+
 # Exports
 MUNISA='hls-f11834'
 LINUX="mn3-000398"
 
+# Functions
 jdrive() {
    sudo mount -t cifs -o user=mikeyleah,uid=mikeyleah "//pfs001b/Development Department/" /mnt/j
 }
@@ -30,3 +36,17 @@ bjss() {
 golp() {
    /home/mikeyleah/bet365/path/src/golp/golp $1
 }
+
+tmuxbb() {
+    tmux new -s bb
+    cd $HOME/workspace/projects/core
+    tmux new-window
+    cd $HOME/workspace/projects/core
+    tmux split-window -h
+    tmux split-window -v
+    tmux new-window
+    tmux rename-window -t0 'code'
+    tmux rename-window -t1 'local'
+    tmux rename-window -t2 'uat'
+}
+

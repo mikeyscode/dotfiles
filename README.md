@@ -9,7 +9,11 @@ ln -s $HOME/workspace/dotfiles/bash/bashrc ~/.bashrc
 ```
 
 #### Tmux
-TBD
+```
+ln -s $HOME/workspace/dotfiles/tmux/tmux.conf ~/.tmux.conf
+```
 
 #### Neovim
-TBD
+```
+ln -s $HOME/workspace/dotfiles/nvim/init.vim ~/.config/nvim/init.vim
+```

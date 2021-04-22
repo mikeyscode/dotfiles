@@ -18,5 +18,5 @@ PS1='\[\033[0;32m\]\[\033[0m\033[0;32m\]\u\[\033[0;36m\] @ \w\[\033[0;32m\] - [$
 # Rebind Capslock to Escape
 setxkbmap -option caps:escape
 
-export GO111MODULE=on go get golang.org/x/tools/gopls@latest
+GO111MODULE=on go get golang.org/x/tools/gopls@latest
 
